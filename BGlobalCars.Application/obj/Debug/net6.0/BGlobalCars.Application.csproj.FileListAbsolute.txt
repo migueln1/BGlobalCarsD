@@ -1,0 +1,17 @@
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\bin\Debug\net6.0\BGlobalCars.Application.deps.json
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\bin\Debug\net6.0\BGlobalCars.Application.dll
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\bin\Debug\net6.0\BGlobalCars.Application.pdb
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\bin\Debug\net6.0\BGlobalCars.Core.dll
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\bin\Debug\net6.0\BGlobalCars.Infrastructure.dll
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\bin\Debug\net6.0\BGlobalCars.Infrastructure.pdb
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\bin\Debug\net6.0\BGlobalCars.Core.pdb
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\obj\Debug\net6.0\BGlobalCars.Application.csproj.AssemblyReference.cache
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\obj\Debug\net6.0\BGlobalCars.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\obj\Debug\net6.0\BGlobalCars.Application.AssemblyInfoInputs.cache
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\obj\Debug\net6.0\BGlobalCars.Application.AssemblyInfo.cs
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\obj\Debug\net6.0\BGlobalCars.Application.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\obj\Debug\net6.0\BGlobalCars.Application.csproj.CopyComplete
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\obj\Debug\net6.0\BGlobalCars.Application.dll
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\obj\Debug\net6.0\refint\BGlobalCars.Application.dll
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\obj\Debug\net6.0\BGlobalCars.Application.pdb
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Application\obj\Debug\net6.0\ref\BGlobalCars.Application.dll
