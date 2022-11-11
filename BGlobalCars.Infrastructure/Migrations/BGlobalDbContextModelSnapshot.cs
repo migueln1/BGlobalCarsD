@@ -32,7 +32,8 @@ namespace BGlobalCars.Infrastructure.Migrations
 
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getDate()");
 
                     b.Property<DateTime?>("ModificationDate")
                         .HasColumnType("datetime2");
@@ -45,6 +46,44 @@ namespace BGlobalCars.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Brands");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreationDate = new DateTime(2022, 11, 10, 20, 2, 6, 46, DateTimeKind.Local).AddTicks(3174),
+                            Name = "Ford"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreationDate = new DateTime(2022, 11, 10, 20, 2, 6, 46, DateTimeKind.Local).AddTicks(3192),
+                            Name = "Nissan"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreationDate = new DateTime(2022, 11, 10, 20, 2, 6, 46, DateTimeKind.Local).AddTicks(3195),
+                            Name = "Toyota"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreationDate = new DateTime(2022, 11, 10, 20, 2, 6, 46, DateTimeKind.Local).AddTicks(3197),
+                            Name = "Chevrolet"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreationDate = new DateTime(2022, 11, 10, 20, 2, 6, 46, DateTimeKind.Local).AddTicks(3199),
+                            Name = "BMW"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreationDate = new DateTime(2022, 11, 10, 20, 2, 6, 46, DateTimeKind.Local).AddTicks(3200),
+                            Name = "Porsche"
+                        });
                 });
 
             modelBuilder.Entity("BGlobalCars.Core.VehicleAggregate.Vehicle", b =>
@@ -60,7 +99,8 @@ namespace BGlobalCars.Infrastructure.Migrations
 
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getDate()");
 
                     b.Property<int>("Doors")
                         .HasColumnType("int");

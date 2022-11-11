@@ -3,7 +3,9 @@ C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Infrastructure\
 C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Infrastructure\bin\Debug\net6.0\BGlobalCars.Infrastructure.dll
 C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Infrastructure\bin\Debug\net6.0\BGlobalCars.Infrastructure.pdb
 C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Infrastructure\bin\Debug\net6.0\BGlobalCars.Core.dll
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Infrastructure\bin\Debug\net6.0\BGlobalCars.SharedKernel.dll
 C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Infrastructure\bin\Debug\net6.0\BGlobalCars.Core.pdb
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Infrastructure\bin\Debug\net6.0\BGlobalCars.SharedKernel.pdb
 C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Infrastructure\obj\Debug\net6.0\BGlobalCars.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Infrastructure\obj\Debug\net6.0\BGlobalCars.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.Infrastructure\obj\Debug\net6.0\BGlobalCars.Infrastructure.AssemblyInfoInputs.cache

@@ -1,11 +1,55 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "OneOf/3.0.223": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/OneOf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/OneOf.dll": {}
+        }
+      },
+      "BGlobalCars.SharedKernel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BGlobalCars.SharedKernel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BGlobalCars.SharedKernel.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "OneOf/3.0.223": {
+      "sha512": "YWabiHBFfDdKIO7/TEa72mARVVo5u5FqFnfXuTqjIupMvJlhoH8d0m4uKtczaINuT0vGR1qlXJayeU6bTw5myg==",
+      "type": "package",
+      "path": "oneof/3.0.223",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/OneOf.dll",
+        "lib/net45/OneOf.dll",
+        "lib/netstandard1.3/OneOf.dll",
+        "lib/netstandard2.0/OneOf.dll",
+        "oneof.3.0.223.nupkg.sha512",
+        "oneof.nuspec"
+      ]
+    },
+    "BGlobalCars.SharedKernel/1.0.0": {
+      "type": "project",
+      "path": "../BGlobalCars.SharedKernel/BGlobalCars.SharedKernel.csproj",
+      "msbuildProject": "../BGlobalCars.SharedKernel/BGlobalCars.SharedKernel.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "BGlobalCars.SharedKernel >= 1.0.0",
+      "OneOf >= 3.0.223"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Miguel\\.nuget\\packages\\": {}
@@ -33,7 +77,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.SharedKernel\\BGlobalCars.SharedKernel.csproj": {
+              "projectPath": "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.SharedKernel\\BGlobalCars.SharedKernel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -45,6 +93,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "OneOf": {
+            "target": "Package",
+            "version": "[3.0.223, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

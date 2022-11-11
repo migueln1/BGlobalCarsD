@@ -1,0 +1,12 @@
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.SharedKernel\bin\Debug\net6.0\BGlobalCars.SharedKernel.deps.json
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.SharedKernel\bin\Debug\net6.0\BGlobalCars.SharedKernel.dll
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.SharedKernel\bin\Debug\net6.0\BGlobalCars.SharedKernel.pdb
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.SharedKernel\obj\Debug\net6.0\BGlobalCars.SharedKernel.csproj.AssemblyReference.cache
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.SharedKernel\obj\Debug\net6.0\BGlobalCars.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.SharedKernel\obj\Debug\net6.0\BGlobalCars.SharedKernel.AssemblyInfoInputs.cache
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.SharedKernel\obj\Debug\net6.0\BGlobalCars.SharedKernel.AssemblyInfo.cs
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.SharedKernel\obj\Debug\net6.0\BGlobalCars.SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.SharedKernel\obj\Debug\net6.0\BGlobalCars.SharedKernel.dll
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.SharedKernel\obj\Debug\net6.0\refint\BGlobalCars.SharedKernel.dll
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.SharedKernel\obj\Debug\net6.0\BGlobalCars.SharedKernel.pdb
+C:\Users\Miguel\Documents\Development\TT\BGlobalCars\BGlobalCars.SharedKernel\obj\Debug\net6.0\ref\BGlobalCars.SharedKernel.dll

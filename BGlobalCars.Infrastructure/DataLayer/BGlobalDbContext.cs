@@ -1,6 +1,7 @@
 ﻿using BGlobalCars.Core.Common;
 using BGlobalCars.Core.VehicleAggregate;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace BGlobalCars.Infrastructure.DataLayer
 {
@@ -11,6 +12,11 @@ namespace BGlobalCars.Infrastructure.DataLayer
         {}
         public BGlobalDbContext()
         {}
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
 
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<Brand> Brands { get; set; }

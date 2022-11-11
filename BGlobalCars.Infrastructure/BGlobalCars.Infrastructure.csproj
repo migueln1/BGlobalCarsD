@@ -14,10 +14,12 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="OneOf" Version="3.0.223" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BGlobalCars.Core\BGlobalCars.Core.csproj" />
+    <ProjectReference Include="..\BGlobalCars.SharedKernel\BGlobalCars.SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>

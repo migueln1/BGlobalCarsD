@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "phJ+TRXonN0J+tMHC/Y6DB0L5krQvdVgNnBvIJuR6Drk3AjIeSwa29h8JZMH80ofnbb6AMtdEXQ/4QE0NbJ90g==",
+  "dgSpecHash": "V4nWoFgxoXhmWihYiQTdl2oyBCngfVzNcQ3m379pX4W0bl9Y2aUNZU9Pgd9B8D20q0FIEra3OORt9uWsJ3U+iQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.Infrastructure\\BGlobalCars.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,7 @@
     "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\oneof\\3.0.223\\oneof.3.0.223.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",

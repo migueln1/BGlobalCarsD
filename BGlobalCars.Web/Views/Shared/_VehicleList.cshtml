@@ -1,0 +1,29 @@
+﻿@using BGlobalCars.Application.Vehicles.ViewModels.Vehicles;
+@model List<VehicleViewModel>
+
+@{
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Placa</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Puertas</th>
+            <th scope="col">Dueño</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach (var vehicle in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => vehicle.Plate)</td>
+                <td>@Html.DisplayFor(modelItem => vehicle.Brand)</td>
+                <td>@Html.DisplayFor(modelItem => vehicle.Model)</td>
+                <td>@Html.DisplayFor(modelItem => vehicle.Doors)</td>
+                <td>@Html.DisplayFor(modelItem => vehicle.Owner)</td>
+            </tr>
+        }
+    </tbody>
+</table>

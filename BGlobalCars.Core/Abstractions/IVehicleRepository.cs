@@ -1,10 +1,12 @@
-﻿namespace BGlobalCars.Core.Abstractions
+﻿using BGlobalCars.SharedKernel.LayerReponses;
+using OneOf;
+
+namespace BGlobalCars.Core.Abstractions
 {
-    public interface IRepository<T, TId> 
+    public interface IRepository<T> 
         where T: class
-        where TId : struct
     {
         Task<IEnumerable<T>> GetAll(CancellationToken ct);
-        Task<TId> TryAdd(T entity, CancellationToken ct);
+        Task<OneOf<T, SQLError>> TryAdd(T entity, CancellationToken ct);
     }
 }

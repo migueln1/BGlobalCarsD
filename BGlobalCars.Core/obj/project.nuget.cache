@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "wDOPuF+Plg2yzmDuuWOagxF4JUkQRBAE1LvYDrRsgAmTIVSrdj/oD6z7YdqTAh/U1UG3iqzkHu3D8rAwWS9iLA==",
+  "dgSpecHash": "GMpQKyt3QWXq0ZyblcLIOhVLnwJ+xAN06DFYnUJDKg7FNpE37MbM8dC+K2mIWUWtbUjzhhgN8W1nIMDA/lBPMw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.Core\\BGlobalCars.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Miguel\\.nuget\\packages\\oneof\\3.0.223\\oneof.3.0.223.nupkg.sha512"
+  ],
   "logs": []
 }

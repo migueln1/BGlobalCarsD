@@ -1,25 +1,107 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using BGlobalCars.Application.Vehicles.Responses.Vehicles;
+@model VehicleListViewModel
+@{
+    ViewData["Title"] = "Vehículos";
 }
+<div>
+    <div class="d-flex p-2 justify-content-between">
+        <h1 class="h3">@ViewData["Title"]</h1>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addVehicle">
+            Agregar
+        </button>
+    </div>
+    <div id="VehicleList">
+        @await Html.PartialAsync("../Shared/_VehicleList", Model.Vehicles)
+    </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="modal fade" id="addVehicle" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar vehículo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="AddVehicleForm">
+                    <div class="modal-body">
+                        <div class="row p-3 border-0">
+                            <div asp-asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm">
+                                <label>Dueño</label>
+                                <input asp-for="NewVehicle.Owner" name="owner" class="form-control" />
+                                <span asp-validation-for="NewVehicle.Owner"></span>
+                            </div>
+                            <div class="form-group col-sm">
+                                <label>Placa</label>
+                                <input asp-for="NewVehicle.Plate" name="plate" class="form-control" />
+                                <span asp-validation-for="NewVehicle.Plate"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            @*<div class="form-floating mb-3">*@
+                            <div class="form-group col-sm">
+                                <label asp-for="NewVehicle.BrandId">Marca</label>
+                                <select class="form-select" asp-for="NewVehicle.BrandId" name="brandId" asp-items="Model.BrandList"></select>
+                            </div>
+                            @*</div>*@
+                            <div class="form-group">
+                                <label>Modelo</label>
+                                <input asp-for="NewVehicle.Model" name="model" class="form-control" />
+                                <span asp-validation-for="NewVehicle.Model"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Puertas</label>
+                                <input asp-for="NewVehicle.Doors" name="doors" class="form-control" />
+                                <span asp-validation-for="NewVehicle.Doors"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="CancelSubmit" class="btn btn-secondary">Cancelar</button>
+                        <button type="submit" id="SubmitVehicle" class="btn btn-primary">Agregar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
 </div>
 
 
 @section Scripts {
-    <script>
-        $.ajax({
-            type: "GET",
-            url: "@Url.Action("GetCars")",
-            dataType: "json",
-            success: function(result){
-                console.log(result)
-            },
-            error: function(req, status, error){
-                console.log(status)
-            }
+    <partial name="_ValidationScriptsPartial" />
+    <script type="text/javascript">
+       
+        $(function() {
+            $("#CancelSubmit").on('click', (e) => {
+                e.preventDefault();
+                $("#AddVehicleForm")[0].reset()
+                $('#addVehicle').modal('hide')
+            })
+            $("#AddVehicleForm").submit(function (e){
+                e.preventDefault();
+                //$("#SubmitVehicle").prop("disabled", true)
+                const form = $(this)[0];
+                const rawData = new FormData(form);
+                fetch("@Url.Action("Index","Home")", {
+                    method: 'POST',
+                    cache: 'reload',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(Object.fromEntries(rawData))
+                })
+                .then((response) => response.text() )
+                .then((result) => {
+                    $("#VehicleList").html(result)
+                    $('#addVehicle').modal('hide')
+                    form.reset()
+                }).catch((error) => {
+                    console.error(error)
+                })
+            });
         });
+        
     </script>
 }

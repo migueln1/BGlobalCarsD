@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -108,7 +112,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.SharedKernel\\BGlobalCars.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.SharedKernel\\BGlobalCars.SharedKernel.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -120,6 +128,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "OneOf": {
+              "target": "Package",
+              "version": "[3.0.223, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -166,6 +180,9 @@
             "projectReferences": {
               "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.Core\\BGlobalCars.Core.csproj": {
                 "projectPath": "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.Core\\BGlobalCars.Core.csproj"
+              },
+              "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.SharedKernel\\BGlobalCars.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.SharedKernel\\BGlobalCars.SharedKernel.csproj"
               }
             }
           }
@@ -197,8 +214,67 @@
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "OneOf": {
+              "target": "Package",
+              "version": "[3.0.223, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.SharedKernel\\BGlobalCars.SharedKernel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.SharedKernel\\BGlobalCars.SharedKernel.csproj",
+        "projectName": "BGlobalCars.SharedKernel",
+        "projectPath": "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.SharedKernel\\BGlobalCars.SharedKernel.csproj",
+        "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.SharedKernel\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
