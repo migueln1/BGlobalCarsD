@@ -1,4 +1,5 @@
-﻿using BGlobalCars.Application.Vehicles.Requests;
+﻿using BGlobalCars.Application.Brands.Abstractions;
+using BGlobalCars.Application.Vehicles.Requests;
 using BGlobalCars.Application.Vehicles.Responses.Vehicles;
 using BGlobalCars.Application.Vehicles.ViewModels.Vehicles;
 using BGlobalCars.Core.Abstractions;
@@ -13,23 +14,22 @@ namespace BGlobalCars.Application.Vehicles.Handlers
     public class AllVehicleRenderHandler : IRequestHandler<RenderVehicleListRequest, VehicleListViewModel>
     {
         private readonly IRepository<Vehicle> _vehicleRepository;
-        private readonly IRepository<Brand> _brandRepository;
+        private readonly IBrandService _brandService;
 
-        public AllVehicleRenderHandler(IRepository<Vehicle> vehicleRepository, IRepository<Brand> brandRepository)
+        public AllVehicleRenderHandler(IRepository<Vehicle> vehicleRepository, IBrandService brandService)
         {
             _vehicleRepository = vehicleRepository;
-            _brandRepository = brandRepository;
+            _brandService = brandService;
         }
 
         public async Task<VehicleListViewModel> Handle(RenderVehicleListRequest request, CancellationToken cancellationToken)
         {
-            var brandList = (await _brandRepository.GetAll(cancellationToken)).Select(b =>
-                new SelectListItem(b.Name, b.Id.ToString())
-            ).ToList();
+            var brandList = await _brandService.GetBrandOptions(cancellationToken);
             var vehicleList = (await _vehicleRepository.GetAll(cancellationToken)).Select(v =>
                 v.Adapt<VehicleViewModel>()
             ).ToList();
-            return new VehicleListViewModel(brandList, vehicleList);
+
+            return new VehicleListViewModel(vehicleList, new(brandList,new()));
         }
     }
 }

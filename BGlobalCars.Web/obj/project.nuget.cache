@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "RR3uMgdA+E+1c5qJtyxI1Vqdg10E+8PowHsUA6bgPz17CsVrRo/L8t0z4nTtrTUUaCl8DXa1vpgbCQYsaPiUoA==",
+  "dgSpecHash": "bxBtI0ZYM3qcc0K3f4K+D8Dso0IrpU5WejeQLgq3D2O0HvCFrb1Z7yrIRSPzJdR/ZmOUtUi1dRGtCE/vJ3ePog==",
   "success": true,
   "projectFilePath": "C:\\Users\\Miguel\\Documents\\Development\\TT\\BGlobalCars\\BGlobalCars.Web\\BGlobalCars.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Miguel\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\jquery\\1.4.4\\jquery.1.4.4.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\jquery.validation\\1.19.5\\jquery.validation.1.19.5.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",

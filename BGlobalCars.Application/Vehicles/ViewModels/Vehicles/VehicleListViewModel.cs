@@ -6,14 +6,14 @@ namespace BGlobalCars.Application.Vehicles.Responses.Vehicles
 {
     public class VehicleListViewModel
     {
-        public VehicleListViewModel(List<SelectListItem> brandList,
-            List<VehicleViewModel> vehicles)
+        public VehicleListViewModel(
+            List<VehicleViewModel> vehicles,
+            AddVehicleViewModel vehicleModel)
         {
-            BrandList = brandList;
             Vehicles = vehicles;
+            VehicleModel = vehicleModel;
         }
-        public List<SelectListItem> BrandList { get; init; }
-        public AddVehicleRequest NewVehicle { get; init; }
+        public AddVehicleViewModel VehicleModel { get; set; }
         public List<VehicleViewModel> Vehicles { get; set; }
 
     }

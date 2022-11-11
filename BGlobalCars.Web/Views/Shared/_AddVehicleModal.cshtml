@@ -1,0 +1,59 @@
+﻿@using BGlobalCars.Application.Vehicles.Responses.Vehicles;
+@model AddVehicleViewModel
+
+<div class="modal fade" id="addVehicle" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar vehículo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="AddVehicleForm"
+                  data-ajax="true"
+                  data-ajax-mode="replace">
+                <div class="modal-body">
+                    <div class="row p-3 border-0">
+                        <div asp-asp-validation-summary="ModelOnly" id="errors" class="text-danger">
+                            <ul id="errorList"></ul>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm">
+                            <label>Dueño</label>
+                            <input asp-for="NewVehicle.Owner" name="owner" class="form-control" />
+                            <span asp-validation-for="NewVehicle.Owner"></span>
+                        </div>
+                        <div class="form-group col-sm">
+                            <label>Placa</label>
+                            <input asp-for="NewVehicle.Plate" name="plate" class="form-control" />
+                            <span asp-validation-for="NewVehicle.Plate"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        @*<div class="form-floating mb-3">*@
+                        <div class="form-group col-sm">
+                            <label asp-for="NewVehicle.BrandId">Marca</label>
+                            <select class="form-select" asp-for="NewVehicle.BrandId" name="brandId" asp-items="Model.BrandList"></select>
+                        </div>
+                        @*</div>*@
+                        <div class="form-group">
+                            <label>Modelo</label>
+                            <input asp-for="NewVehicle.Model" name="model" class="form-control" />
+                            @*<span asp-validation-for="NewVehicle.Model"></span>*@
+                        </div>
+                        <div class="form-group">
+                            <label>Puertas</label>
+                            <input asp-for="NewVehicle.Doors" name="doors" class="form-control" />
+                            @*<span asp-validation-for="NewVehicle.Doors"></span>*@
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="CancelSubmit" class="btn btn-secondary">Cancelar</button>
+                    <button type="submit" id="SubmitVehicle" class="btn btn-primary">Agregar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

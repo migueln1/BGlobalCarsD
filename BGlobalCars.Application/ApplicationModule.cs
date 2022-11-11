@@ -1,4 +1,6 @@
-﻿using BGlobalCars.Infrastructure;
+﻿using BGlobalCars.Application.Brands;
+using BGlobalCars.Application.Brands.Abstractions;
+using BGlobalCars.Infrastructure;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,7 +15,7 @@ namespace BGlobalCars.Application
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddInfrastructureConfig(config);
-
+            services.AddTransient<IBrandService, BrandService>();
             return services;
         }
     }

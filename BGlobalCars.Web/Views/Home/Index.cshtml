@@ -13,76 +13,38 @@
     <div id="VehicleList">
         @await Html.PartialAsync("../Shared/_VehicleList", Model.Vehicles)
     </div>
-
-    <div class="modal fade" id="addVehicle" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Agregar vehículo</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form id="AddVehicleForm">
-                    <div class="modal-body">
-                        <div class="row p-3 border-0">
-                            <div asp-asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-sm">
-                                <label>Dueño</label>
-                                <input asp-for="NewVehicle.Owner" name="owner" class="form-control" />
-                                <span asp-validation-for="NewVehicle.Owner"></span>
-                            </div>
-                            <div class="form-group col-sm">
-                                <label>Placa</label>
-                                <input asp-for="NewVehicle.Plate" name="plate" class="form-control" />
-                                <span asp-validation-for="NewVehicle.Plate"></span>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            @*<div class="form-floating mb-3">*@
-                            <div class="form-group col-sm">
-                                <label asp-for="NewVehicle.BrandId">Marca</label>
-                                <select class="form-select" asp-for="NewVehicle.BrandId" name="brandId" asp-items="Model.BrandList"></select>
-                            </div>
-                            @*</div>*@
-                            <div class="form-group">
-                                <label>Modelo</label>
-                                <input asp-for="NewVehicle.Model" name="model" class="form-control" />
-                                <span asp-validation-for="NewVehicle.Model"></span>
-                            </div>
-                            <div class="form-group">
-                                <label>Puertas</label>
-                                <input asp-for="NewVehicle.Doors" name="doors" class="form-control" />
-                                <span asp-validation-for="NewVehicle.Doors"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" id="CancelSubmit" class="btn btn-secondary">Cancelar</button>
-                        <button type="submit" id="SubmitVehicle" class="btn btn-primary">Agregar</button>
-                    </div>
-                </form>
-
-            </div>
-        </div>
+    <div id="VehicleAddModal">
+        @await Html.PartialAsync("../Shared/_AddVehicleModal", Model.VehicleModel)
     </div>
+
+    
 </div>
 
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
     <script type="text/javascript">
-       
+        function isJsonString(str) {
+            try {
+                JSON.parse(str);
+            } catch (e) {
+                return false;
+            }
+            return true;
+        }
         $(function() {
+
             $("#CancelSubmit").on('click', (e) => {
                 e.preventDefault();
                 $("#AddVehicleForm")[0].reset()
                 $('#addVehicle').modal('hide')
             })
+
             $("#AddVehicleForm").submit(function (e){
                 e.preventDefault();
                 //$("#SubmitVehicle").prop("disabled", true)
                 const form = $(this)[0];
+                
                 const rawData = new FormData(form);
                 fetch("@Url.Action("Index","Home")", {
                     method: 'POST',
@@ -92,14 +54,29 @@
                     },
                     body: JSON.stringify(Object.fromEntries(rawData))
                 })
-                .then((response) => response.text() )
-                .then((result) => {
-                    $("#VehicleList").html(result)
-                    $('#addVehicle').modal('hide')
-                    form.reset()
-                }).catch((error) => {
+                .then((response) => {
+                    response.json()
+                        .then(json => {
+                            if (json.success){
+                                $("#VehicleList").html(json.partialView)
+                                $('#addVehicle').modal('hide')
+                                form.reset()
+
+                            }else{
+                                const eList = json.errors.map(e => `<li>${e.errorMessage}</li>`)
+                                $("#errorList").html(eList)
+                            }  
+                        })
+                    
+                })
+                .catch((error) => {
                     console.error(error)
                 })
+                   
+                    
+                
+
+                
             });
         });
         
